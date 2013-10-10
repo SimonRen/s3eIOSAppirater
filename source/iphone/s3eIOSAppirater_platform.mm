@@ -39,9 +39,22 @@ void s3eIOSAppiraterParams_platform(int appId, int usesUntilPrompt, int daysUnti
     NSString *nsRemindTitle = [NSString stringWithUTF8String:remindTitle];
     NSString *nsRemindText = [NSString stringWithUTF8String:remindText];
     NSString *nsRemindYesButton = [NSString stringWithUTF8String:remindYesButton];
-    NSString *nsRemindNoButton = [NSString stringWithUTF8String:remindNoButton];
+    NSString *nsRemindNoButton = @"不再提醒";
     
-    [g_appirater setParams: appId : usesUntilPrompt: daysUntilPrompt: daysRemindLater: numSignificantEvents: nsRateNowTitle: nsRateNowText: nsRateNowYesButton: nsRateNowNoButton: nsRemindTitle: nsRemindText: nsRemindYesButton: nsRemindNoButton];
+    [g_appirater setParams
+        :appId
+        :usesUntilPrompt
+        :daysUntilPrompt
+        :daysRemindLater
+        :numSignificantEvents
+        :nsRateNowTitle
+        :nsRateNowText
+        :nsRateNowYesButton
+        :nsRateNowNoButton
+        :nsRemindTitle
+        :nsRemindText
+        :nsRemindYesButton
+        :nsRemindNoButton];
 }
 
 void s3eIOSAppiraterAppLaunched_platform(bool canPromptForRating)

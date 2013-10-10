@@ -453,14 +453,16 @@ RateUIViewSelector mAlertSelect;
             case 0:
             {
                 // they don't want to rate it
-                [userDefaults setBool:YES forKey:kAppiraterDeclinedToRate];
+                //[userDefaults setBool:YES forKey:kAppiraterDeclinedToRate];
                 [userDefaults synchronize];
                 break;
 
             }
             case 1:
-            {                
+            {
                 // remind them later
+                // SIMONREN ::: reset significant event count, for YIUGAME use ONLY
+                [userDefaults setInteger:0 forKey:kAppiraterSignificantEventCount];
                 [userDefaults setDouble:[[NSDate date] timeIntervalSince1970] forKey:kAppiraterReminderRequestDate];
                 [userDefaults synchronize];
                 break;
