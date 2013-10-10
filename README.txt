@@ -1,3 +1,5 @@
+[[[ Sources changed for my project only, Please be careful. ]]]
+
 Appirater is an iOS library that let developers ask for reviews from their users.
 It prompts to the user and requests him to rate the app, allowing him to choose
 between "Rate", "Remind Later" and "No Thanks".
